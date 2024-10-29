@@ -1,3 +1,2 @@
 # veramonitor
-
-Wooohooo a new package!
+picopixelmonitor v2

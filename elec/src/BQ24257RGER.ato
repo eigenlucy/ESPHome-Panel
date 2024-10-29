@@ -1,0 +1,32 @@
+component BQ24257RGER:
+    # component BQ24257RGER
+    footprint = "VQFN-24_L4.0-W4.0-P0.50-TL-EP2.7"
+    lcsc_id = "C3682516"
+    mpn = "C3682516"
+    # pins
+    signal CE_hash ~ pin 1
+    signal D_plus ~ pin 2
+    signal D_minus ~ pin 3
+    signal AGND ~ pin 4
+    signal SDA ~ pin 5
+    signal SCL ~ pin 6
+    signal STAT ~ pin 7
+    signal PG_hash ~ pin 8
+    signal TS ~ pin 9
+    signal ISET ~ pin 10
+    signal BAT ~ pin 11
+    BAT ~ pin 12
+    signal CSIN ~ pin 13
+    CSIN ~ pin 14
+    signal PGND ~ pin 15
+    PGND ~ pin 16
+    signal SW ~ pin 17
+    SW ~ pin 18
+    signal IN ~ pin 19
+    signal PMID ~ pin 20
+    signal BOOT ~ pin 21
+    signal ILIM ~ pin 22
+    signal VDPM ~ pin 23
+    signal LDO ~ pin 24
+    signal EP ~ pin 25
+

@@ -1,0 +1,45 @@
+from "sk6805-ec20/elec/src/sk6805-ec20.ato" import SK6805EC20
+from "generics/capacitors.ato" import Capacitor
+from "generics/interfaces.ato" import Power, Pair
+
+module LedrowX10:
+    power = new Power
+    signal DIN
+    signal DOUT
+    
+    # Create Components
+    led1 = new SK6805EC20
+    led2 = new SK6805EC20
+    led3 = new SK6805EC20
+    led4 = new SK6805EC20
+    led5 = new SK6805EC20
+    led6 = new SK6805EC20
+    led7 = new SK6805EC20
+    led8 = new SK6805EC20
+    led9 = new SK6805EC20
+    led10 = new SK6805EC20
+    
+    # Attach Power
+    power ~ led1.power
+    power ~ led2.power
+    power ~ led3.power
+    power ~ led4.power
+    power ~ led5.power
+    power ~ led6.power
+    power ~ led7.power
+    power ~ led8.power
+    power ~ led9.power
+    power ~ led10.power
+
+    # Attach Signals
+    DIN ~ led1.din.io
+    led1.dout.io ~ led2.din.io
+    led2.dout.io ~ led3.din.io
+    led3.dout.io ~ led4.din.io
+    led4.dout.io ~ led5.din.io
+    led5.dout.io ~ led6.din.io
+    led6.dout.io ~ led7.din.io
+    led7.dout.io ~ led8.din.io
+    led8.dout.io ~ led9.din.io
+    led9.dout.io ~ led10.din.io
+    led10.dout.io ~ DOUT

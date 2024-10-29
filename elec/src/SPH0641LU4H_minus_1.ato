@@ -1,0 +1,18 @@
+import Power from "generics/interfaces.ato"
+
+component SPH0641LU4H_minus_1:
+    # component SPH0641LU4H_minus_1
+    footprint = "MIC-SMD_5P_L3.5-W2.7-P0.82_SPH0641LU4H-1"
+    lcsc_id = "C2879853"
+    mpn = "C2879853"
+    # pins
+    signal DATA ~ pin 1
+    signal SELECT ~ pin 2
+    signal GROUND ~ pin 3
+    signal CLOCK ~ pin 4
+    signal VDD ~ pin 5
+
+    power = new Power
+    power.vcc ~ VDD
+    power.gnd ~ GROUND
+

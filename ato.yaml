@@ -3,4 +3,39 @@ builds:
   default:
     entry: elec/src/veramonitor.ato:Veramonitor
 dependencies:
-- generics
+- name: generics
+  version_spec: '@09ad6baeaab93d53b9b6c90069ac750f4161d76f'
+  link_broken: true
+  path: elec/src/generics
+- name: rp2040
+  version_spec: '@f6c06f3f01c257523d4c15ad5c5a48809b8914c8'
+  link_broken: true
+  path: elec/src/rp2040
+- name: qwiic-connectors
+  version_spec:
+  link_broken: true
+  path: elec/src/qwiic-connectors
+- name: jst-gh
+  version_spec:
+  link_broken: true
+  path: elec/src/jst-gh
+- name: esp32-s3
+  version_spec: '@84a3387cfa3fb6772459bec7b2bebbbded5790ec'
+  link_broken: true
+  path: elec/src/esp32-s3
+- name: usb-connectors
+  version_spec: '@1be66943895494857495c3afe24389a895b9fac8'
+  link_broken: true
+  path: elec/src/usb-connectors
+- name: sk6805-ec20
+  version_spec:
+  link_broken: true
+  path: elec/src/sk6805-ec20
+- name: programming-headers
+  version_spec: '@e3a6ca6b5b93e3c2db899aa7cc5a8fde17920abc'
+  link_broken: true
+  path: elec/src/programming-headers
+- name: ams1117-33
+  version_spec:
+  link_broken: true
+  path: elec/src/ams1117-33
