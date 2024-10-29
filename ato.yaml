@@ -2,6 +2,8 @@ ato-version: ^0.2.0
 builds:
   default:
     entry: elec/src/veramonitor.ato:Veramonitor
+  ledrow-x10:
+    entry: elec/src/ledrow-x10.ato:LedrowX10 
 dependencies:
 - name: generics
   version_spec: '@09ad6baeaab93d53b9b6c90069ac750f4161d76f'

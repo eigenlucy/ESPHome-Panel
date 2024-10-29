@@ -39,4 +39,4 @@ module SK6805EC20:
     cap = new Capacitor
     power ~ cap.power
     cap.package = "0402"
-    cap.value = 100nF +/- 20%
+    cap.value = 100nF +/- 30%

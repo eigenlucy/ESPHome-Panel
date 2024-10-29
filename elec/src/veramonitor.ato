@@ -9,6 +9,7 @@ from "ledrow-x10.ato" import LedrowX10
 from "esp32-s3/elec/src/esp32-s3.ato" import ESP32S3
 from "SPH0641LU4H_minus_1.ato" import SPH0641LU4H_minus_1
 from "programming-headers/elec/src/programming-headers.ato" import TC2050
+from "HS12864G18B.ato" import HS12864G18B
 
 interface PDM_I2S:
     signal pdm_sel
@@ -28,24 +29,35 @@ module Veramonitor:
     mic = new SPH0641LU4H_minus_1
     ldo = new AMS111733
     micro = new ESP32S3
+    lcd = new HS12864G18B
     ledrow1 = new LedrowX10
-
+    ledrow2 = new LedrowX10
+    ledrow3 = new LedrowX10
+    ledrow4 = new LedrowX10
     pdm.pdm_sel ~ mic.SELECT; pdm.pdm_sel ~ micro.io3
     pdm.pdm_clk ~ mic.CLOCK; pdm.pdm_clk ~ micro.io5
     pdm.pdm_data ~ mic.DATA; pdm.pdm_data ~ micro.io4
     
     usbc_connector.power ~ power5v
     power5v ~ ledrow1.power
+    power5v ~ ledrow2.power
+    power5v ~ ledrow3.power
+    power5v ~ ledrow4.power
     power5v ~ ldo.power_in
     ldo.power_out ~ power3v3
     power3v3 ~ micro.power
+    power3v3 ~ lcd.power
     power3v3 ~ mic.power
     power5v ~ jtag_connector.power
 
     micro.jtag ~ jtag_connector.jtag
 
     micro.io9 ~ signal led_data; led_data ~ ledrow1.DIN
+    ledrow1.DOUT ~ ledrow2.DIN
+    ledrow2.DOUT ~ ledrow3.DIN
+    ledrow3.DOUT ~ ledrow4.DIN
 
     micro.i2c ~ i2c_connector.i2c; i2c_connector.i2c ~ i2c
+    micro.i2c ~ lcd.i2c
 
     usbc_connector.usb2 ~ micro.usb2
