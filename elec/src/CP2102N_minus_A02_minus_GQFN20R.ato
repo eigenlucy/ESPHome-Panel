@@ -1,0 +1,101 @@
+import Power from "generics/interfaces.ato"
+import USB2 from "generics/interfaces.ato"
+import UART from "generics/interfaces.ato"
+import Resistor from "generics/resistors.ato"
+import Capacitor from "generics/capacitors.ato"
+import LED from "generics/leds.ato"
+
+component CP2102N_minus_A02_minus_GQFN20R:
+    # component CP2102N_minus_A02_minus_GQFN20R
+    footprint = "QFN-20_L3.0-W3.0-P0.50-BL-EP1.7_EFM8BB21F16G"
+    lcsc_id = "C969913"
+    mpn = "C969913"
+    # pins
+    signal GPIO_period_1_slash_RS485 ~ pin 1
+    signal GPIO_period_0_slash_CLK ~ pin 2
+    signal GND ~ pin 3
+    signal D_plus ~ pin 4
+    signal D_minus ~ pin 5
+    signal VDD ~ pin 6
+    signal VREGIN ~ pin 7
+    signal VBUS ~ pin 8
+    signal RSTb ~ pin 9
+    signal NC ~ pin 10
+    signal SUSPENDb ~ pin 11
+    GND ~ pin 12
+    signal WAKEUP ~ pin 13
+    signal SUSPEND ~ pin 14
+    signal CTS ~ pin 15
+    signal RTS ~ pin 16
+    signal RXD ~ pin 17
+    signal TXD ~ pin 18
+    signal GPIO_period_3_slash_RXT ~ pin 19
+    signal GPIO_period_2_slash_TXT ~ pin 20
+    signal EP ~ pin 21
+  
+    power = new Power
+    usb2 = new USB2
+    uart = new UART
+
+    r_vbus_sen_in = new Resistor
+    r_vbus_sen_pulldown = new Resistor
+    r_tx_led = new Resistor
+    r_rx_led = new Resistor
+    c_vreg_in1 = new Capacitor
+    c_vreg_in2 = new Capacitor
+    c_vdd1 = new Capacitor
+    c_vdd2 = new Capacitor
+    rx_led = new _0402LEDGreen
+    tx_led = new _0402LEDRed
+
+    r_vbus_sen_in.value = 20kohms +/- 10%
+    r_vbus_sen_in.footprint = "R0402"
+    r_vbus_sen_pulldown.value = 47kohms +/- 20%
+    r_vbus_sen_pulldown.footprint = "R0402"
+    r_tx_led.value = 20kohms +/- 20%
+    r_tx_led.footprint = "R0402"
+    r_rx_led.value = 20kohms +/- 20%
+    r_rx_led.footprint = "R0402"
+    c_vreg_in1.value = 10uF +/- 20%
+    c_vreg_in1.footprint = "C0402"
+    c_vreg_in2.value = 10nF +/- 20%
+    c_vreg_in2.footprint = "C0402"
+    c_vdd1.value = 10uF +/- 20%
+    c_vdd1.footprint = "C0402"
+    c_vdd2.value = 10nF +/- 20%
+    c_vdd2.footprint = "C0402"
+
+
+    # Connect Power In
+    power.vcc ~ VREGIN; VREGIN ~ c_vreg_in1.p1; VREGIN ~ c_vreg_in2.p1
+    c_vreg_in1.p2 ~ power.gnd; c_vreg_in2.p2 ~ power.gnd
+    VDD ~ c_vdd1.p1; VDD ~ c_vdd2.p1
+    c_vdd1.p2 ~ power.gnd; c_vdd2.p2 ~ power.gnd
+    power.gnd ~ GND; power.gnd ~ EP
+    
+    # VBUS SEN
+    power.vcc ~ r_vbus_sen_in.p1; r_vbus_sen_in.p2 ~ VBUS
+    VBUS ~ r_vbus_sen_pulldown.p1; r_vbus_sen_pulldown.p2 ~ power.gnd
+
+    # Connect USB2
+    usb2.dp ~ D_plus
+    usb2.dm ~ D_minus
+    # USB2 Indicator LEDs
+    VDD ~ r_rx_led.p1; r_rx_led.p2 ~ rx_led.anode; rx_led.cathode ~ GPIO_period_3_slash_RXT
+    VDD ~ r_tx_led.p1; r_tx_led.p2 ~ tx_led.anode; tx_led.cathode ~ GPIO_period_2_slash_TXT
+
+    # Connect UART
+    uart.tx ~ TXD
+    uart.rx ~ RXD
+
+component _0402LEDGreen:
+  mpn = "C1322304"
+  footprint = "LED0402-RD"
+  signal anode ~ pin 1
+  signal cathode ~ pin 2
+
+component _0402LEDRed:
+  mpn = "C130719"
+  footprint = "LED0402-RD"
+  signal anode ~ pin 1
+  signal cathode ~ pin 2

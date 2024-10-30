@@ -10,6 +10,7 @@ from "esp32-s3/elec/src/esp32-s3.ato" import ESP32S3
 from "SPH0641LU4H_minus_1.ato" import SPH0641LU4H_minus_1
 from "programming-headers/elec/src/programming-headers.ato" import TC2050
 from "HS12864G18B.ato" import HS12864G18B
+from "CP2102N_minus_A02_minus_GQFN20R.ato" import CP2102N_minus_A02_minus_GQFN20R
 
 interface PDM_I2S:
     signal pdm_sel
@@ -30,6 +31,7 @@ module Veramonitor:
     ldo = new AMS111733
     micro = new ESP32S3
     lcd = new HS12864G18B
+    uart_converter = new CP2102N_minus_A02_minus_GQFN20R
     ledrow1 = new LedrowX10
     ledrow2 = new LedrowX10
     ledrow3 = new LedrowX10
@@ -39,6 +41,7 @@ module Veramonitor:
     pdm.pdm_data ~ mic.DATA; pdm.pdm_data ~ micro.io4
     
     usbc_connector.power ~ power5v
+    power5v ~ uart_converter.power
     power5v ~ ledrow1.power
     power5v ~ ledrow2.power
     power5v ~ ledrow3.power
@@ -60,4 +63,5 @@ module Veramonitor:
     micro.i2c ~ i2c_connector.i2c; i2c_connector.i2c ~ i2c
     micro.i2c ~ lcd.i2c
 
-    usbc_connector.usb2 ~ micro.usb2
+    usbc_connector.usb2 ~ uart_converter.usb2
+    uart_converter.uart ~ micro.uart

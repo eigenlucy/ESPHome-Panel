@@ -44,6 +44,11 @@ module ESP32S3:
     enable_button.out ~ ic.EN
     enable_button.btn -> ButtonSKRPACE010
 
+    # connect up UART
+    uart = new UART
+    uart.tx ~ ic.TXD0
+    uart.rx ~ ic.RXD0
+
     # connect up USB
     usb2 = new USB2
     usb2.dm ~ ic.IO19

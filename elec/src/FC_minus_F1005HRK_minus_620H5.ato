@@ -1,0 +1,9 @@
+component FC_minus_F1005HRK_minus_620H5:
+    # component FC_minus_F1005HRK_minus_620H5
+    footprint = "LED0402-RD"
+    lcsc_id = "C130719"
+    mpn = "C130719"
+    # pins
+    signal K ~ pin 1
+    signal A ~ pin 2
+
