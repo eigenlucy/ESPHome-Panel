@@ -58,7 +58,13 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "starved_thermal|41970000|89615000|97b60dfc-950c-46ff-82f4-83a3a138e7c3|98c7f6b0-e1fe-4d52-8fed-703f814cae88|F.Cu",
+        "starved_thermal|43535000|110005000|97b60dfc-950c-46ff-82f4-83a3a138e7c3|803ae277-749f-422a-8ecc-a9015684498f|B.Cu",
+        "starved_thermal|47725000|110005000|97b60dfc-950c-46ff-82f4-83a3a138e7c3|07a88064-2400-4e3a-99df-1db2efb22b4d|B.Cu",
+        "starved_thermal|49350000|81725000|97b60dfc-950c-46ff-82f4-83a3a138e7c3|081c0f8f-6b5a-4586-9dbc-09076ac9ebbb|F.Cu",
+        "starved_thermal|50750000|80325000|97b60dfc-950c-46ff-82f4-83a3a138e7c3|93829072-efa1-44ee-a628-4d47e3af05a3|F.Cu"
+      ],
       "meta": {
         "version": 2
       },
@@ -277,7 +283,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "../../../build/default.net",
-      "plot": "",
+      "plot": "../../v1-fabout/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
