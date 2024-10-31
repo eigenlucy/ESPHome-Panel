@@ -64,6 +64,8 @@ module Veramonitor:
     ledrow2.DOUT ~ ledrow3.DIN
     ledrow3.DOUT ~ ledrow4.DIN
 
+    xh5a.p3 ~ micro.io14; xh5a.p4 ~ micro.io13; xh5a.p5 ~ micro.io11
+
     micro.i2c ~ i2c_connector.i2c; i2c_connector.i2c ~ i2c
     micro.i2c ~ lcd.i2c
 
