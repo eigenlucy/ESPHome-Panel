@@ -1,5 +1,5 @@
 import Power from "generics/interfaces.ato"
-import Capacitor from "generics/capacitor.ato"
+import Capacitor from "generics/capacitors.ato"
 
 component SPH0641LU4H_minus_1:
     # component SPH0641LU4H_minus_1
@@ -20,3 +20,4 @@ component SPH0641LU4H_minus_1:
     c_vcc = new Capacitor
     c_vcc.value = 10nF +/- 20%
     c_vcc.footprint = "C0402"
+    c_vcc.p1 ~ VDD; c_vcc.p2 ~ GROUND
