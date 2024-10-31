@@ -11,6 +11,7 @@ from "SPH0641LU4H_minus_1.ato" import SPH0641LU4H_minus_1
 from "programming-headers/elec/src/programming-headers.ato" import TC2050
 from "HS12864G18B.ato" import HS12864G18B
 from "CP2102N_minus_A02_minus_GQFN20R.ato" import CP2102N_minus_A02_minus_GQFN20R
+from "XH_minus_5A.ato" import XH_minus_5A
 
 interface PDM_I2S:
     signal pdm_sel
@@ -32,6 +33,7 @@ module Veramonitor:
     micro = new ESP32S3
     lcd = new HS12864G18B
     uart_converter = new CP2102N_minus_A02_minus_GQFN20R
+    xh5a = new XH_minus_5A
     ledrow1 = new LedrowX10
     ledrow2 = new LedrowX10
     ledrow3 = new LedrowX10
@@ -47,8 +49,10 @@ module Veramonitor:
     power5v ~ ledrow3.power
     power5v ~ ledrow4.power
     power5v ~ ldo.power_in
+    power3v3 ~ xh5a.power
     ldo.power_out ~ power3v3
     power3v3 ~ micro.power
+    power3v3 ~ i2c_connector.power
     power3v3 ~ lcd.power
     power3v3 ~ mic.power
     power5v ~ jtag_connector.power

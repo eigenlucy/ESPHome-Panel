@@ -1,0 +1,17 @@
+import Power from "generics/interfaces.ato"
+
+component XH_minus_5A:
+    # component XH_minus_5A
+    footprint = "CONN-TH_5P-P2.50_XH-5A_C2318"
+    lcsc_id = "C2318"
+    mpn = "C2318"
+    # pins
+    signal VCC ~ pin 1
+    signal GND ~ pin 2
+    signal p3 ~ pin 3
+    signal p4 ~ pin 4
+    signal p5 ~ pin 5
+
+    power = new Power
+    power.vcc ~ VCC; power.gnd ~ GND
+
