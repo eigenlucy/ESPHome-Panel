@@ -24563,6 +24563,19 @@
 		(layer "Edge.Cuts")
 		(uuid "4320924a-264d-471d-b8d2-3960bfa61e95")
 	)
+	(gr_text "{GITHASH}"
+		(at 146.47 69.66 -0)
+		(layer "B.Cu")
+		(uuid "6b6e0e43-a334-4dc6-a6a8-8debc319d9bd")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify left bottom mirror)
+		)
+	)
 	(gr_text "AVERAGE\n"
 		(at 49.92 130.89 0)
 		(layer "F.SilkS")
