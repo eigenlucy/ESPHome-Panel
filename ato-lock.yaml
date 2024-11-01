@@ -1,0 +1,156 @@
+poses:
+  schematic:
+    11e197f8:
+      mirror_x: false
+      mirror_y: false
+      position:
+        x: 165.0
+        y: -45.0
+      rotation: 0
+    173f10fc:
+      mirror_x: false
+      mirror_y: false
+      position:
+        x: 195.0
+        y: -60.0
+      rotation: 0
+    1abd8ca9:
+      mirror_x: false
+      mirror_y: false
+      position:
+        x: 75.0
+        y: -165.0
+      rotation: 0
+    3ae0d004:
+      mirror_x: false
+      mirror_y: false
+      position:
+        x: 30.0
+        y: -120.0
+      rotation: 0
+    4477b355:
+      mirror_x: false
+      mirror_y: false
+      position:
+        x: 270.0
+        y: -75.0
+      rotation: 0
+    4f86b862:
+      mirror_x: false
+      mirror_y: false
+      position:
+        x: 210.0
+        y: -60.0
+      rotation: 0
+    5f7f3ff3:
+      mirror_x: false
+      mirror_y: false
+      position:
+        x: 150.0
+        y: 150.0
+      rotation: 0
+    6464835f:
+      mirror_x: false
+      mirror_y: false
+      position:
+        x: 225.0
+        y: -90.0
+      rotation: 0
+    7d8331e5:
+      mirror_x: false
+      mirror_y: false
+      position:
+        x: 270.0
+        y: -75.0
+      rotation: 0
+    8352ae6e:
+      mirror_x: false
+      mirror_y: false
+      position:
+        x: 225.0
+        y: -45.0
+      rotation: 0
+    941fea1c:
+      mirror_x: false
+      mirror_y: false
+      position:
+        x: 90.0
+        y: -90.0
+      rotation: 0
+    9699522b:
+      mirror_x: false
+      mirror_y: false
+      position:
+        x: 75.0
+        y: 105.0
+      rotation: 0
+    98caeb4f:
+      mirror_x: false
+      mirror_y: false
+      position:
+        x: 120.0
+        y: 90.0
+      rotation: 0
+    9f4b413f:
+      mirror_x: false
+      mirror_y: false
+      position:
+        x: 120.0
+        y: 75.0
+      rotation: 0
+    bf10d71b:
+      mirror_x: false
+      mirror_y: false
+      position:
+        x: 165.0
+        y: 105.0
+      rotation: 0
+    bfc848d5:
+      mirror_x: false
+      mirror_y: false
+      position:
+        x: 120.0
+        y: 105.0
+      rotation: 0
+    cb21f569:
+      mirror_x: false
+      mirror_y: false
+      position:
+        x: -45.0
+        y: 75.0
+      rotation: 0
+    d0430bb2:
+      mirror_x: false
+      mirror_y: false
+      position:
+        x: 90.0
+        y: 105.0
+      rotation: 0
+    d90688c9:
+      mirror_x: false
+      mirror_y: false
+      position:
+        x: 105.0
+        y: -105.0
+      rotation: 0
+    d9e61f2e:
+      mirror_x: false
+      mirror_y: false
+      position:
+        x: 165.0
+        y: -285.0
+      rotation: 0
+    elec/src/veramonitor.ato:Veramonitor::usbc_connector.cc2_res:
+      mirror_x: false
+      mirror_y: false
+      position:
+        x: 195.0
+        y: -60.0
+      rotation: 0
+    f05a1212:
+      mirror_x: false
+      mirror_y: false
+      position:
+        x: 315.0
+        y: -120.0
+      rotation: 0

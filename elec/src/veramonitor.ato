@@ -23,7 +23,6 @@ module Veramonitor:
     power3v3 = new Power
 
     i2c = new I2C
-
     jtag_connector = new TC2050
     usbc_connector = new USBCConn
     i2c_connector = new QwiicConnector

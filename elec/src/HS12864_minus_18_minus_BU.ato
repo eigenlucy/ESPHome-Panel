@@ -1,0 +1,27 @@
+component HS12864_minus_18_minus_BU:
+    # component HS12864_minus_18_minus_BU
+    footprint = "LCD-TH_L75.0-W54.7-LCD12864"
+    lcsc_id = "C5143582"
+    mpn = "C5143582"
+    # pins
+    signal VDD ~ pin 1
+    signal VSS ~ pin 2
+    signal V0 ~ pin 3
+    signal D0 ~ pin 4
+    signal D1 ~ pin 5
+    signal D2 ~ pin 6
+    signal D3 ~ pin 7
+    signal D4 ~ pin 8
+    signal D5 ~ pin 9
+    signal D6 ~ pin 10
+    signal D7 ~ pin 11
+    signal CS1 ~ pin 12
+    signal CS2 ~ pin 13
+    signal slash_RST ~ pin 14
+    signal R_slash_W ~ pin 15
+    signal RS ~ pin 16
+    signal E ~ pin 17
+    signal Vout ~ pin 18
+    signal LEDA ~ pin 19
+    signal LEDK ~ pin 20
+
