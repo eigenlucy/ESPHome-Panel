@@ -1,0 +1,235 @@
+** Drc report for veramonitor.kicad_pcb **
+** Created on 2024-11-10T16:56:01-0800 **
+
+** Found 46 DRC violations **
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(57.8700 mm, 94.1250 mm): PTH pad [<no net>] of U3
+    @(57.8700 mm, 94.1250 mm): Pad 3 [gnd] of U3 on F.Cu
+[starved_thermal]: Thermal relief connection to zone incomplete (layer F.Cu; zone min spoke count 2; actual 1)
+    Local override; error
+    @(151.2300 mm, 66.8500 mm): Zone [gnd] on F.Cu and B.Cu
+    @(47.9500 mm, 80.3250 mm): Pad 41 [gnd] of U5 on F.Cu
+[starved_thermal]: Thermal relief connection to zone incomplete (layer F.Cu; zone min spoke count 2; actual 1)
+    Local override; error
+    @(151.2300 mm, 66.8500 mm): Zone [gnd] on F.Cu and B.Cu
+    @(49.3500 mm, 78.9250 mm): Pad 41 [gnd] of U5 on F.Cu
+[starved_thermal]: Thermal relief connection to zone incomplete (layer F.Cu; zone min spoke count 2; actual 1)
+    Local override; error
+    @(151.2300 mm, 66.8500 mm): Zone [gnd] on F.Cu and B.Cu
+    @(48.3750 mm, 117.6750 mm): Pad A12 [gnd] of U2 on F.Cu
+[starved_thermal]: Thermal relief connection to zone incomplete (layer F.Cu; zone min spoke count 2; actual 1)
+    Local override; error
+    @(151.2300 mm, 66.8500 mm): Zone [gnd] on F.Cu and B.Cu
+    @(48.3750 mm, 117.3750 mm): Pad B1 [gnd] of U2 on F.Cu
+[hole_near_hole]: Drilled hole too close to other hole (board setup constraints min 0.2495 mm; actual 0.0000 mm)
+    Rule: board setup constraints; error
+    @(49.5250 mm, 98.0000 mm): Via [vcc] on F.Cu - B.Cu
+    @(49.1750 mm, 98.0150 mm): Via [vcc] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets  and gnd)
+    Local override; error
+    @(57.8700 mm, 94.1250 mm): PTH pad [<no net>] of U3
+    @(57.8700 mm, 94.1250 mm): Pad 3 [gnd] of U3 on F.Cu
+[shorting_items]: Items shorting two nets (nets  and gnd)
+    Local override; error
+    @(48.6500 mm, 81.7250 mm): PTH pad [<no net>] of U5
+    @(47.9500 mm, 81.7250 mm): Pad 41 [gnd] of U5 on F.Cu
+[shorting_items]: Items shorting two nets (nets  and gnd)
+    Local override; error
+    @(48.6500 mm, 81.7250 mm): PTH pad [<no net>] of U5
+    @(49.3500 mm, 81.7250 mm): Pad 41 [gnd] of U5 on F.Cu
+[shorting_items]: Items shorting two nets (nets  and gnd)
+    Local override; error
+    @(50.0500 mm, 81.7250 mm): PTH pad [<no net>] of U5
+    @(49.3500 mm, 81.7250 mm): Pad 41 [gnd] of U5 on F.Cu
+[shorting_items]: Items shorting two nets (nets  and gnd)
+    Local override; error
+    @(50.0500 mm, 81.7250 mm): PTH pad [<no net>] of U5
+    @(50.7500 mm, 81.7250 mm): Pad 41 [gnd] of U5 on F.Cu
+[shorting_items]: Items shorting two nets (nets  and gnd)
+    Local override; error
+    @(47.9500 mm, 81.0250 mm): PTH pad [<no net>] of U5
+    @(47.9500 mm, 81.7250 mm): Pad 41 [gnd] of U5 on F.Cu
+[shorting_items]: Items shorting two nets (nets  and gnd)
+    Local override; error
+    @(47.9500 mm, 81.0250 mm): PTH pad [<no net>] of U5
+    @(47.9500 mm, 80.3250 mm): Pad 41 [gnd] of U5 on F.Cu
+[shorting_items]: Items shorting two nets (nets  and gnd)
+    Local override; error
+    @(49.3500 mm, 81.0250 mm): PTH pad [<no net>] of U5
+    @(49.3500 mm, 81.7250 mm): Pad 41 [gnd] of U5 on F.Cu
+[shorting_items]: Items shorting two nets (nets  and gnd)
+    Local override; error
+    @(49.3500 mm, 81.0250 mm): PTH pad [<no net>] of U5
+    @(49.3500 mm, 80.3250 mm): Pad 41 [gnd] of U5 on F.Cu
+[shorting_items]: Items shorting two nets (nets  and gnd)
+    Local override; error
+    @(50.7500 mm, 81.0250 mm): PTH pad [<no net>] of U5
+    @(50.7500 mm, 81.7250 mm): Pad 41 [gnd] of U5 on F.Cu
+[shorting_items]: Items shorting two nets (nets  and gnd)
+    Local override; error
+    @(50.7500 mm, 81.0250 mm): PTH pad [<no net>] of U5
+    @(50.7500 mm, 80.3250 mm): Pad 41 [gnd] of U5 on F.Cu
+[shorting_items]: Items shorting two nets (nets  and gnd)
+    Local override; error
+    @(48.6500 mm, 80.3250 mm): PTH pad [<no net>] of U5
+    @(47.9500 mm, 80.3250 mm): Pad 41 [gnd] of U5 on F.Cu
+[shorting_items]: Items shorting two nets (nets  and gnd)
+    Local override; error
+    @(48.6500 mm, 80.3250 mm): PTH pad [<no net>] of U5
+    @(49.3500 mm, 80.3250 mm): Pad 41 [gnd] of U5 on F.Cu
+[shorting_items]: Items shorting two nets (nets  and gnd)
+    Local override; error
+    @(50.0500 mm, 80.3250 mm): PTH pad [<no net>] of U5
+    @(50.7500 mm, 80.3250 mm): Pad 41 [gnd] of U5 on F.Cu
+[shorting_items]: Items shorting two nets (nets  and gnd)
+    Local override; error
+    @(50.0500 mm, 80.3250 mm): PTH pad [<no net>] of U5
+    @(49.3500 mm, 80.3250 mm): Pad 41 [gnd] of U5 on F.Cu
+[shorting_items]: Items shorting two nets (nets  and gnd)
+    Local override; error
+    @(47.9500 mm, 79.6250 mm): PTH pad [<no net>] of U5
+    @(47.9500 mm, 78.9250 mm): Pad 41 [gnd] of U5 on F.Cu
+[shorting_items]: Items shorting two nets (nets  and gnd)
+    Local override; error
+    @(47.9500 mm, 79.6250 mm): PTH pad [<no net>] of U5
+    @(47.9500 mm, 80.3250 mm): Pad 41 [gnd] of U5 on F.Cu
+[shorting_items]: Items shorting two nets (nets  and gnd)
+    Local override; error
+    @(49.3500 mm, 79.6250 mm): PTH pad [<no net>] of U5
+    @(49.3500 mm, 78.9250 mm): Pad 41 [gnd] of U5 on F.Cu
+[shorting_items]: Items shorting two nets (nets  and gnd)
+    Local override; error
+    @(49.3500 mm, 79.6250 mm): PTH pad [<no net>] of U5
+    @(49.3500 mm, 80.3250 mm): Pad 41 [gnd] of U5 on F.Cu
+[shorting_items]: Items shorting two nets (nets  and gnd)
+    Local override; error
+    @(50.7500 mm, 79.6250 mm): PTH pad [<no net>] of U5
+    @(50.7500 mm, 78.9250 mm): Pad 41 [gnd] of U5 on F.Cu
+[shorting_items]: Items shorting two nets (nets  and gnd)
+    Local override; error
+    @(50.7500 mm, 79.6250 mm): PTH pad [<no net>] of U5
+    @(50.7500 mm, 80.3250 mm): Pad 41 [gnd] of U5 on F.Cu
+[shorting_items]: Items shorting two nets (nets  and gnd)
+    Local override; error
+    @(48.6500 mm, 78.9250 mm): PTH pad [<no net>] of U5
+    @(47.9500 mm, 78.9250 mm): Pad 41 [gnd] of U5 on F.Cu
+[shorting_items]: Items shorting two nets (nets  and gnd)
+    Local override; error
+    @(48.6500 mm, 78.9250 mm): PTH pad [<no net>] of U5
+    @(49.3500 mm, 78.9250 mm): Pad 41 [gnd] of U5 on F.Cu
+[shorting_items]: Items shorting two nets (nets  and gnd)
+    Local override; error
+    @(50.0500 mm, 78.9250 mm): PTH pad [<no net>] of U5
+    @(50.7500 mm, 78.9250 mm): Pad 41 [gnd] of U5 on F.Cu
+[shorting_items]: Items shorting two nets (nets  and gnd)
+    Local override; error
+    @(50.0500 mm, 78.9250 mm): PTH pad [<no net>] of U5
+    @(49.3500 mm, 78.9250 mm): Pad 41 [gnd] of U5 on F.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.2225 mm)
+    Rule: board setup constraints hole; error
+    @(47.1850 mm, 111.4350 mm): PTH pad [<no net>] of U2
+    @(48.3750 mm, 111.7750 mm): Pad A4 [vcc] of U2 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1901 mm)
+    Rule: netclass 'Default'; error
+    @(47.1850 mm, 111.4350 mm): PTH pad [<no net>] of U2
+    @(48.3750 mm, 111.2750 mm): Pad B12 [gnd] of U2 on F.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.2130 mm)
+    Rule: board setup constraints hole; error
+    @(47.1850 mm, 117.2150 mm): PTH pad [<no net>] of U2
+    @(48.3650 mm, 116.8750 mm): Pad A9 [vcc] of U2 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1901 mm)
+    Rule: netclass 'Default'; error
+    @(47.1850 mm, 117.2150 mm): PTH pad [<no net>] of U2
+    @(48.3750 mm, 117.3750 mm): Pad B1 [gnd] of U2 on F.Cu
+[items_not_allowed]: Items not allowed (keepout area)
+    Rule: keepout area; error
+    @(52.5550 mm, 100.9950 mm): Pad 1 [vcc] of U1 on F.Cu
+[items_not_allowed]: Items not allowed (keepout area)
+    Rule: keepout area; error
+    @(53.8250 mm, 100.9950 mm): Pad 2 [tms] of U1 on F.Cu
+[items_not_allowed]: Items not allowed (keepout area)
+    Rule: keepout area; error
+    @(55.0950 mm, 100.9950 mm): Pad 3 [gnd] of U1 on F.Cu
+[items_not_allowed]: Items not allowed (keepout area)
+    Rule: keepout area; error
+    @(56.3650 mm, 100.9950 mm): Pad 4 [tck] of U1 on F.Cu
+[items_not_allowed]: Items not allowed (keepout area)
+    Rule: keepout area; error
+    @(57.6350 mm, 100.9950 mm): Pad 5 [gnd] of U1 on F.Cu
+[items_not_allowed]: Items not allowed (keepout area)
+    Rule: keepout area; error
+    @(57.6350 mm, 99.7250 mm): Pad 6 [tdo] of U1 on F.Cu
+[items_not_allowed]: Items not allowed (keepout area)
+    Rule: keepout area; error
+    @(56.3650 mm, 99.7250 mm): Pad 7 [<no net>] of U1 on F.Cu
+[items_not_allowed]: Items not allowed (keepout area)
+    Rule: keepout area; error
+    @(55.0950 mm, 99.7250 mm): Pad 8 [tdi] of U1 on F.Cu
+[items_not_allowed]: Items not allowed (keepout area)
+    Rule: keepout area; error
+    @(53.8250 mm, 99.7250 mm): Pad 9 [<no net>] of U1 on F.Cu
+[items_not_allowed]: Items not allowed (keepout area)
+    Rule: keepout area; error
+    @(52.5550 mm, 99.7250 mm): Pad 10 [reset] of U1 on F.Cu
+[annular_width]: Annular width (board setup constraints min annular width 0.1000 mm; actual 0.0000 mm)
+    Rule: board setup constraints; error
+    @(57.8700 mm, 94.1250 mm): PTH pad [<no net>] of U3
+
+** Found 13 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(50.7500 mm, 80.3250 mm): Pad 41 [gnd] of U5 on F.Cu
+    @(49.3500 mm, 80.3250 mm): Pad 41 [gnd] of U5 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(52.7650 mm, 114.0750 mm): Pad 2 [gnd] of C9 on F.Cu
+    @(151.2300 mm, 66.8500 mm): Zone [gnd] on F.Cu and B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(52.7650 mm, 114.0750 mm): Pad 2 [gnd] of C9 on F.Cu
+    @(54.8300 mm, 112.1750 mm): Track [gnd] on F.Cu, length 1.2000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(48.3750 mm, 113.5750 mm): Pad B7 [dm] of U2 on F.Cu
+    @(51.3625 mm, 114.5750 mm): Track [dm] on F.Cu, length 2.9875 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(48.3750 mm, 114.0750 mm): Track [dp] on F.Cu, length 2.9892 mm
+    @(48.3750 mm, 115.0750 mm): Pad B6 [dp] of U2 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(63.4350 mm, 71.8500 mm): PTH pad 0 [_0] of U7
+    @(63.4350 mm, 115.8500 mm): PTH pad 0 [_0] of U7
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(139.5050 mm, 115.8500 mm): PTH pad 0 [_0] of U7
+    @(139.5050 mm, 71.8500 mm): PTH pad 0 [_0] of U7
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(139.5050 mm, 71.8500 mm): PTH pad 0 [_0] of U7
+    @(63.4350 mm, 71.8500 mm): PTH pad 0 [_0] of U7
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(144.4150 mm, 77.3400 mm): PTH pad 14 [lcd-nc] of U7
+    @(144.4150 mm, 79.8800 mm): PTH pad 13 [lcd-nc] of U7
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(144.4150 mm, 79.8800 mm): PTH pad 13 [lcd-nc] of U7
+    @(144.4150 mm, 82.4200 mm): PTH pad 12 [lcd-nc] of U7
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(144.4150 mm, 82.4200 mm): PTH pad 12 [lcd-nc] of U7
+    @(144.4150 mm, 84.9600 mm): PTH pad 11 [lcd-nc] of U7
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(144.4150 mm, 84.9600 mm): PTH pad 11 [lcd-nc] of U7
+    @(144.4150 mm, 87.5000 mm): PTH pad 10 [lcd-nc] of U7
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(144.4150 mm, 87.5000 mm): PTH pad 10 [lcd-nc] of U7
+    @(144.4150 mm, 90.0400 mm): PTH pad 9 [lcd-nc] of U7
+
+** Found 0 Footprint errors **
+
+** End of Report **
