@@ -1,0 +1,34 @@
+import Power from "generics/interfaces.ato"
+import I2S from "generics/interfaces.ato"
+import Capacitor from "generics/capacitors.ato"
+import Resistor from "generics/resistors.ato"
+
+module ClassDAmp:
+    power = new Power
+    i2s = new I2S
+    ic = new MAX98357AETE_plus_T
+
+component MAX98357AETE_plus_T:
+    # component MAX98357AETE_plus_T
+    footprint = "TQFN-16_L3.0-W3.0-P0.50-BL-EP1.5"
+    lcsc_id = "C910544"
+    mpn = "C910544"
+    # pins
+    signal DIN ~ pin 1
+    signal GAIN_SLOT ~ pin 2
+    signal GND ~ pin 3
+    signal SD_MODE_hash ~ pin 4
+    signal N_period_C_period ~ pin 5
+    N_period_C_period ~ pin 6
+    signal VDD ~ pin 7
+    VDD ~ pin 8
+    signal OUTP ~ pin 9
+    signal OUTN ~ pin 10
+    GND ~ pin 11
+    N_period_C_period ~ pin 12
+    N_period_C_period ~ pin 13
+    signal LRCLK ~ pin 14
+    GND ~ pin 15
+    signal BCLK ~ pin 16
+    signal EP ~ pin 17
+

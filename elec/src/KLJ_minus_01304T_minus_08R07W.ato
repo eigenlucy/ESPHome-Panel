@@ -1,0 +1,11 @@
+component KLJ_minus_01304T_minus_08R07W:
+    # component KLJ_minus_01304T_minus_08R07W
+    footprint = "BUZ-SMD_4P-L13.0-W13.0-P11.4-BL"
+    lcsc_id = "C18186315"
+    mpn = "C18186315"
+    # pins
+    signal LEAD_plus ~ pin 1
+    signal LEAD_minus ~ pin 2
+    signal DUMMY ~ pin 3
+    DUMMY ~ pin 4
+

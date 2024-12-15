@@ -1,0 +1,9 @@
+component FS_minus_2308:
+    # component FS_minus_2308
+    footprint = "BEEP-TH_BD23.2-P9.20-D1.0"
+    lcsc_id = "C482322"
+    mpn = "C482322"
+    # pins
+    signal _1 ~ pin 1
+    signal _2 ~ pin 2
+
