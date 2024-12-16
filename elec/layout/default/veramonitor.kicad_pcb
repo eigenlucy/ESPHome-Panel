@@ -2018,7 +2018,7 @@
 		(uuid "358cdded-243c-4937-bb16-b17dbff230b0")
 		(at 56.25 66 180)
 		(property "Reference" "U22"
-			(at 0 2.25 360)
+			(at 0 2.25 0)
 			(layer "F.SilkS")
 			(uuid "f43ad2d4-fd43-4d27-bbb1-dc6873995723")
 			(effects
@@ -2029,7 +2029,7 @@
 			)
 		)
 		(property "Value" "?"
-			(at 0 5.07 360)
+			(at 0 5.07 0)
 			(layer "F.Fab")
 			(uuid "c9207e09-a984-47fc-9934-23fb09f640a2")
 			(effects
@@ -2040,7 +2040,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "15f9fef8-a54b-4756-875e-e426fbbd99f8")
@@ -2052,7 +2052,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1ec2a987-b642-43ee-9b9b-fc6e99fb07e7")
@@ -2064,7 +2064,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d0a6f603-236e-495f-a98c-55cd6192fcf4")
@@ -2171,7 +2171,7 @@
 			(uuid "a3cd5524-5118-4533-b8ae-095ad6a5adb6")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "e228bbd4-31c6-4a78-b885-9a354f3dbe8a")
 			(effects
@@ -15737,19 +15737,6 @@
 		(fill none)
 		(layer "Edge.Cuts")
 		(uuid "4320924a-264d-471d-b8d2-3960bfa61e95")
-	)
-	(gr_text "{GITHASH}"
-		(at 66 63.25 0)
-		(layer "F.SilkS")
-		(uuid "1a3545c3-c932-4282-bdda-a2dfa5c4406d")
-		(effects
-			(font
-				(size 1.5 1.5)
-				(thickness 0.3)
-				(bold yes)
-			)
-			(justify left bottom)
-		)
 	)
 	(gr_text "izzymonitor :3\nDecember 2024"
 		(at 127 65.5 0)
