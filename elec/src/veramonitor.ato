@@ -69,3 +69,4 @@ module Veramonitor:
     power3v3 ~ amp.power
     amp.OUTP ~ speaker.LEAD_plus; amp.OUTN ~ speaker.LEAD_minus
     amp.LRCLK ~ micro.io8; amp.BCLK ~ micro.io18; amp.DIN ~ micro.io17
+    micro.io14 ~ sw1.KEY; micro.io21 ~ sw2.KEY; micro.io47 ~ sw3.KEY; micro.io48 ~ sw4.KEY; micro.io45 ~ sw5.KEY; micro.io35 ~ sw6.KEY
