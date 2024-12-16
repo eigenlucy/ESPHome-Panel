@@ -1,0 +1,11 @@
+component SZYY1209RGB_minus_B_space_4PIN:
+    # component SZYY1209RGB_minus_B_space_4PIN
+    footprint = "LED-SMD_4P-L3.2-W2.7-TL_GBD"
+    lcsc_id = "C3029073"
+    mpn = "C3029073"
+    # pins
+    signal C ~ pin 1
+    C ~ pin 2
+    signal A ~ pin 4
+    C ~ pin 3
+

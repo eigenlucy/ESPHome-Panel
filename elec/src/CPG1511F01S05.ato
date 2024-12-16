@@ -1,0 +1,26 @@
+import Power from "generics/interfaces.ato"
+import SK6805EC20 from "sk6805-ec20/elec/src/sk6805-ec20.ato" 
+import Resistor from "generics/resistors.ato"
+
+module KailhSW:
+    power = new Power
+    signal KEY
+    signal DIN
+    signal DOUT
+    led = new SK6805EC20
+    sw = new CPG1511F01S05
+    pullup = new Resistor; pullup.value = 10kohm +/- 20%; pullup.package = "0201"
+    power ~ led.power
+    power.vcc ~ pullup.p1; pullup.p2 ~ sw.p1; sw.p2 ~ power.gnd
+    KEY ~ sw.p1
+    DIN ~ led.din.io; DOUT ~ led.dout.io
+
+component CPG1511F01S05:
+    # component CPG1511F01S05
+    footprint = "KEY-TH_CPG1511F01S0X"
+    lcsc_id = "C400225"
+    mpn = "C400225"
+    # pins
+    signal p2 ~ pin 2
+    signal p1 ~ pin 1
+

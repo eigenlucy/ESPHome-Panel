@@ -5,8 +5,18 @@ import Resistor from "generics/resistors.ato"
 
 module ClassDAmp:
     power = new Power
-    i2s = new I2S
     ic = new MAX98357AETE_plus_T
+    C1 = new Capacitor; C1.value = 10uF +/- 20%; C1.package = "0402"
+    C2 = new Capacitor; C2.value = 100nF +/- 20%; C2.package = "0402"
+    R1 = new Resistor; R1.value = 10kohm +/- 20%; R1.package = "0402"
+    power.vcc ~ ic.VDD; power.gnd ~ ic.GND; power.gnd ~ ic.EP
+    R1.p1 ~ power.vcc; R1.p2 ~ ic.SD_MODE_hash
+    C1.power ~ power; C2.power ~ power
+    signal BCLK; BCLK ~ ic.BCLK
+    signal LRCLK; LRCLK ~ ic.LRCLK
+    signal DIN; DIN ~ ic.DIN
+    signal OUTP; OUTP ~ ic.OUTP
+    signal OUTN; OUTN ~ ic.OUTN
 
 component MAX98357AETE_plus_T:
     # component MAX98357AETE_plus_T

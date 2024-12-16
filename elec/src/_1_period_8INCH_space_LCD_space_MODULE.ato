@@ -1,0 +1,31 @@
+import Power from "generics/interfaces.ato"
+import LCDSPI from "generics/interfaces.ato"
+
+module TFTDisplay:
+    power = new Power
+    spi = new LCDSPI
+    lcd = new _1_period_8INCH_space_LCD_space_MODULE
+
+    lcd.VCC ~ power.vcc; lcd.GND ~ power.gnd
+    spi.mosi ~ lcd.DIN
+    spi.sck ~ lcd.CLK
+    spi.cs ~ lcd.CS
+    spi.dc ~ lcd.DC
+    spi.reset ~ lcd.RST
+    spi.backlightEN ~ lcd.BL
+
+component _1_period_8INCH_space_LCD_space_MODULE:
+    # component _1_period_8INCH_space_LCD_space_MODULE
+    footprint = "LCD-TH_L56.5-W34.0_1-8INCH-LCD-MODULE"
+    lcsc_id = "C359940"
+    mpn = "C359940"
+    # pins
+    signal VCC ~ pin 1
+    signal GND ~ pin 2
+    signal DIN ~ pin 3
+    signal CLK ~ pin 4
+    signal CS ~ pin 5
+    signal DC ~ pin 6
+    signal RST ~ pin 7
+    signal BL ~ pin 8
+

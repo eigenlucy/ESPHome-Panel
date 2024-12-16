@@ -1,0 +1,11 @@
+component SZYY1615RGB_minus_B_space_4PIN:
+    # component SZYY1615RGB_minus_B_space_4PIN
+    footprint = "LED-SMD_4P-L1.6-W1.5-TR-1"
+    lcsc_id = "C3029071"
+    mpn = "C3029071"
+    # pins
+    signal plus ~ pin 4
+    signal B ~ pin 3
+    signal G ~ pin 2
+    signal R ~ pin 1
+

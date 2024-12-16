@@ -14,6 +14,8 @@ from "CP2102N_minus_A02_minus_GQFN20R.ato" import CP2102N_minus_A02_minus_GQFN20
 from "XH_minus_5A.ato" import XH_minus_5A
 from "KLJ_minus_01304T_minus_08R07W.ato" import KLJ_minus_01304T_minus_08R07W
 from "MAX98357AETE_plus_T.ato" import ClassDAmp
+from "_1_period_8INCH_space_LCD_space_MODULE.ato" import TFTDisplay
+from "kailh-sw.ato" import KailhSW
 
 interface PDM_I2S:
     signal pdm_sel
@@ -32,40 +34,38 @@ module Veramonitor:
     mic = new SPH0641LU4H_minus_1
     ldo = new AMS111733
     micro = new ESP32S3
-    lcd = new HS12864G18B
-    xh5a = new XH_minus_5A
-    ledrow1 = new LedrowX10
-    ledrow2 = new LedrowX10
-    ledrow3 = new LedrowX10
-    ledrow4 = new LedrowX10
+    lcd = new TFTDisplay
+    amp = new ClassDAmp
     pdm.pdm_sel ~ mic.SELECT; pdm.pdm_sel ~ micro.io3
     pdm.pdm_clk ~ mic.CLOCK; pdm.pdm_clk ~ micro.io5
     pdm.pdm_data ~ mic.DATA; pdm.pdm_data ~ micro.io4
-    
+    sw1 = new KailhSW
+    sw2 = new KailhSW
+    sw3 = new KailhSW
+    sw4 = new KailhSW
+    sw5 = new KailhSW
+    sw6 = new KailhSW
+    speaker = new KLJ_minus_01304T_minus_08R07W
+
     usbc_connector.power ~ power5v
-    power5v ~ ledrow1.power
-    power5v ~ ledrow2.power
-    power5v ~ ledrow3.power
-    power5v ~ ledrow4.power
     power5v ~ ldo.power_in
-    power3v3 ~ xh5a.power
     ldo.power_out ~ power3v3
     power3v3 ~ micro.power
     power3v3 ~ i2c_connector.power
-    power3v3 ~ lcd.power
+    power5v ~ lcd.power
     power3v3 ~ mic.power
     power5v ~ jtag_connector.power
 
     micro.jtag ~ jtag_connector.jtag
 
-    micro.io9 ~ signal led_data; led_data ~ ledrow1.DIN
-    ledrow1.DOUT ~ ledrow2.DIN
-    ledrow2.DOUT ~ ledrow3.DIN
-    ledrow3.DOUT ~ ledrow4.DIN
-
-    xh5a.p3 ~ micro.io14; xh5a.p4 ~ micro.io13; xh5a.p5 ~ micro.io11
-
     micro.i2c ~ i2c_connector.i2c; i2c_connector.i2c ~ i2c
-    micro.i2c ~ lcd.i2c
 
     usbc_connector.usb2 ~ micro.usb2
+
+    lcd.spi.mosi ~ micro.io13; lcd.spi.sck ~ micro.io12; lcd.spi.cs ~ micro.io11; lcd.spi.dc ~ micro.io10; lcd.spi.reset ~ micro.io9; lcd.spi.backlightEN ~ micro.io46
+
+    power3v3 ~ sw1.power; power3v3 ~ sw2.power; power3v3 ~ sw3.power; power3v3 ~ sw4.power; power3v3 ~ sw5.power; power3v3 ~ sw6.power
+    micro.io16 ~ sw1.DIN; sw1.DOUT ~ sw2.DIN; sw2.DOUT ~ sw3.DIN; sw3.DOUT ~ sw4.DIN; sw4.DOUT ~ sw5.DIN; sw5.DOUT ~ sw6.DIN
+    power3v3 ~ amp.power
+    amp.OUTP ~ speaker.LEAD_plus; amp.OUTN ~ speaker.LEAD_minus
+    amp.LRCLK ~ micro.io8; amp.BCLK ~ micro.io18; amp.DIN ~ micro.io17

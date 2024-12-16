@@ -1,0 +1,11 @@
+component B3F_minus_4055:
+    # component B3F_minus_4055
+    footprint = "KEY-TH_4P-L12.0-W12.0-P5.00-LS13.4-EH"
+    lcsc_id = "C84931"
+    mpn = "C84931"
+    # pins
+    signal _3 ~ pin 3
+    signal _4 ~ pin 4
+    signal _2 ~ pin 2
+    signal _1 ~ pin 1
+
