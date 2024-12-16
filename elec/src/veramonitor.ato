@@ -16,6 +16,7 @@ from "KLJ_minus_01304T_minus_08R07W.ato" import KLJ_minus_01304T_minus_08R07W
 from "MAX98357AETE_plus_T.ato" import ClassDAmp
 from "_1_period_8INCH_space_LCD_space_MODULE.ato" import TFTDisplay
 from "kailh-sw.ato" import KailhSW
+from "generics/buttons.ato" import ButtonPullup, ButtonSKRPACE010
 
 interface PDM_I2S:
     signal pdm_sel
@@ -46,6 +47,7 @@ module Veramonitor:
     sw5 = new KailhSW
     sw6 = new KailhSW
     speaker = new KLJ_minus_01304T_minus_08R07W
+    boot = new ButtonPullup; boot.power ~ power3v3; boot.out ~ micro.io0; boot.btn -> ButtonSKRPACE010
 
     usbc_connector.power ~ power5v
     power5v ~ ldo.power_in
