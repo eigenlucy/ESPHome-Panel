@@ -3,6 +3,9 @@
 
 <a href="https://github.com/izzyhub/izzymonitor-firmware">firmware development repo</a>
 
+# Downloading Gerbers/PCBA files for assembly service
+PCBA files are generated in the build artifacts on each commit. Download the build artifacts from the latest commit under the Actions tab. Upload the default gerber zip to JLCPCB, and use default.csv for the BOM file + default.pos.csv for the CPL file
+
 # Requirements 
 <li><a href="https://docs.atopile.io/latest/">atopile</a></li>
 <li><a href="https://rustup.rs/">rust</a>, <a href="https://docs.esp-rs.org/book/installation/riscv-and-xtensa.html">espup</a>, <a href="https://github.com/esp-rs/espflash">espflash</a></li>
