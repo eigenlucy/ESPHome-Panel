@@ -5,6 +5,14 @@ esp32-s3 based home assistant control panel
 <li><a href="https://docs.atopile.io/latest/">atopile</a></li>
 <li><a href="https://rustup.rs/">rust</a>, <a href="https://docs.esp-rs.org/book/installation/riscv-and-xtensa.html">espup</a>, <a href="https://github.com/esp-rs/espflash">espflash</a></li>
 
+# Directory
+## Ato builds
+<li>Ato builds listed in ato.yaml</li>
+<li>Veramonitor.ato is the main build. The final PCB is build from this, and the corresponding kicad project is in elec/layouts/default/veramonitor.kicad_pro</li>
+<li>kailh-sw.ato contains the keyswitch+neopixel module. kicad files are located in elec/layouts/kailh-sw</li>
+<li>MAX98357AETE_plus_T.ato contains the ClassDAmp module</li>
+
+
 # TESTING IN PROGRESS:
 ## <a href="https://www.waveshare.com/wiki/1.8inch_LCD_Module">Wavshare 1.8in LCD Module</a> with <a href="https://crates.io/crates/st7735-lcd">ST7735 Controller</a>
 module TFTDisplay in elec/src _1_peroid_8INCH_space_MODULE.ato
@@ -27,20 +35,21 @@ WS2812B style protocol. Defined in elec/src/sk6805-ec20/elec/src/sk6805-ec20.ato
 
 Neopixels invoked and configured in each KailhSW module
 
-Neopixel Pin Maping (veramonitor.ato, line 70)
+Neopixel Pin Maping (veramonitor.ato, line 70):
 ```
     micro.io16 ~ sw1.DIN; sw1.DOUT ~ sw2.DIN; sw2.DOUT ~ sw3.DIN; sw3.DOUT ~ sw4.DIN; sw4.DOUT ~ sw5.DIN; sw5.DOUT ~ sw6.DIN
 ```
-## Kailh Switches
-Based on <a href="https://jlcpcb.com/partdetail/Kailh-CPG1511F01S05/C400225">CPG1511F01S05</a> <a href="https://jlcpcb.com/parts/componentSearch?searchTxt=C400225">LCSC_ID: C400225</a> Configured in elec/src/kailh-sw.ato. Each switch has a neopixel for backlighting.
+## <a href="https://jlcpcb.com/partdetail/Kailh-CPG1511F01S05/C400225">CPG1511F01S05</a> Kailh Switches
+Accomodates standard keycaps
+<a href="https://jlcpcb.com/parts/componentSearch?searchTxt=C400225">LCSC_ID: C400225</a> Kail module configured in elec/src/kailh-sw.ato.
 
 Active low. Pin mappings:
 ```
     micro.io14 ~ sw1.KEY; micro.io21 ~ sw2.KEY; micro.io47 ~ sw3.KEY; micro.io48 ~ sw4.KEY; micro.io45 ~ sw5.KEY; micro.io35 ~ sw6.KEY
 ```
 
-## Test microphone
-SPH0641LU4H-1 MEMS Microphone (LCSC_ID = C2879853)
+## <a href="https://www.digikey.com/en/products/detail/knowles/SPH0641LU4H-1/5332438">SPH0641LU4h1</a> MEMS microphone
+<a href="https://jlcpcb.com/partdetail/Knowles-SPH0641LU4H1/C2879853">LCSC_ID = C2879853</a>
 
 PDM Pin Mappings:
 ```
@@ -48,5 +57,9 @@ PDM Pin Mappings:
     pdm.pdm_clk ~ mic.CLOCK; pdm.pdm_clk ~ micro.io5
     pdm.pdm_data ~ mic.DATA; pdm.pdm_data ~ micro.io4
 ```
-## Test home assistant integration
-    ESPHome Panel and/or Rust?
+
+# To Do 
+## 1: Verify basic functionality
+## 2: Finish rust firmware
+## 3: Home assistant integration
+## 4: 3D printed enclosure/wall panel mount
