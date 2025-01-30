@@ -5,7 +5,6 @@ esp32-s3 based home assistant control panel
 ## Checklist:
 
 ## Test LCD (SPI)
-From esp32-s3/elec/src/esp32-s3.ato:
 ```
     lcd.spi.mosi ~ micro.io13; lcd.spi.sck ~ micro.io12; lcd.spi.cs ~ micro.io11; lcd.spi.dc ~ micro.io10; lcd.spi.reset ~ micro.io9; lcd.spi.backlightEN ~ micro.io46
 ```
