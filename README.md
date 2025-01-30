@@ -1,31 +1,38 @@
 # esphome panel
 esp32-s3 based home assistant control panel
 
-# TESTING IN PROGRESS:
-## Checklist:
+# Requirements 
+<li><a href="https://docs.atopile.io/latest/">atopile</a></li>
+<li><a href="https://rustup.rs/">rust</a>, <a href="https://docs.esp-rs.org/book/installation/riscv-and-xtensa.html">espup</a>, <a href="https://github.com/esp-rs/espflash">espflash</a></li>
 
-## <a href="https://www.waveshare.com/wiki/1.8inch_LCD_Module">LCD Module</a>
-SPI Pin mapping (elec/src/veramonitor.ato, line 67)
+# TESTING IN PROGRESS:
+## <a href="https://www.waveshare.com/wiki/1.8inch_LCD_Module">Wavshare 1.8in LCD Module</a> with <a href="https://crates.io/crates/st7735-lcd">ST7735 Controller</a>
+module TFTDisplay in elec/src _1_peroid_8INCH_space_MODULE.ato
+<a href="https://jlcpcb.com/partdetail/Waveshare-1_8inch_LCDModule/C359940">LCSC_ID = C359940</a>
+
+SPI Pin mapping (elec/src/veramonitor.ato, line 67):
 ```
     lcd.spi.mosi ~ micro.io13; lcd.spi.sck ~ micro.io12; lcd.spi.cs ~ micro.io11; lcd.spi.dc ~ micro.io10; lcd.spi.reset ~ micro.io9; lcd.spi.backlightEN ~ micro.io46
 ```
 
-## Test amplifier/speaker (I2S):
-Uses MAX98357 (LCSC ID = C910544) 3W Class D amplifier IC + KLJ-1304T Speaker (LCSC_ID = C18186315). ESP32-S3 sends digital audio data to MAX98357 via I2S.
+##  <a href="https://learn.adafruit.com/adafruit-max98357-i2s-class-d-mono-amp/overview">MAX98357</a> Amp + Speaker  
+Uses <a href="https://learn.adafruit.com/adafruit-max98357-i2s-class-d-mono-amp/overview">MAX98357</a> (LCSC ID = <a href="https://jlcpcb.com/partdetail/978950-MAX98357AETET/C910544">C910544</a>) 3W Class D amplifier IC + KLJ-1304T Speaker (LCSC_ID = C18186315). ESP32-S3 sends digital audio data to MAX98357 via I2S.
 
-I2S Pin Mapping (veramonitor.ato, line 73)
+I2S Pin Mapping (veramonitor.ato, line 73):
 ```
     amp.LRCLK ~ micro.io8; amp.BCLK ~ micro.io18; amp.DIN ~ micro.io17
 ```
-## Test <a href="https://jlcpcb.com/partdetail/OPSCOOptoelectronics-SK6805EC20/C2890036">neopixels</a>
+## Test <a href="https://jlcpcb.com/partdetail/OPSCOOptoelectronics-SK6805EC20/C2890036">SK6805 neopixels</a>
 WS2812B style protocol. Defined in elec/src/sk6805-ec20/elec/src/sk6805-ec20.ato
 
-DIN of LED1 connected to esp32-s3 IO16
+Neopixels invoked and configured in each KailhSW module
+
+Neopixel Pin Maping (veramonitor.ato, line 70)
 ```
     micro.io16 ~ sw1.DIN; sw1.DOUT ~ sw2.DIN; sw2.DOUT ~ sw3.DIN; sw3.DOUT ~ sw4.DIN; sw4.DOUT ~ sw5.DIN; sw5.DOUT ~ sw6.DIN
 ```
-## Buttons
-Based on <a href="https://jlcpcb.com/partdetail/Kailh-CPG1511F01S05/C400225">CPG1511F01S05</a> (LCSC_ID: C400225) Key Switches. Configured in elec/src/kailh-sw.ato. Each switch has a neopixel for backlighting.
+## Kailh Switches
+Based on <a href="https://jlcpcb.com/partdetail/Kailh-CPG1511F01S05/C400225">CPG1511F01S05</a> <a href="https://jlcpcb.com/parts/componentSearch?searchTxt=C400225">LCSC_ID: C400225</a> Configured in elec/src/kailh-sw.ato. Each switch has a neopixel for backlighting.
 
 Active low. Pin mappings:
 ```
