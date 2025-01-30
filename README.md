@@ -1,5 +1,7 @@
-# esphome panel
-esp32-s3 based home assistant control panel
+# izzymonitor
+<a href="https://eigenlucy.github.io/projects/izzymonitor">esp32-s3 based home assistant control panel</a>
+
+<a href="https://github.com/izzyhub/izzymonitor-firmware">firmware development repo</a>
 
 # Requirements 
 <li><a href="https://docs.atopile.io/latest/">atopile</a></li>
