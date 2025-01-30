@@ -491,7 +491,7 @@
       "plot": "../gebers/",
       "pos_files": "./",
       "specctra_dsn": "",
-      "step": "",
+      "step": "veramonitor.step",
       "svg": "",
       "vrml": ""
     },
