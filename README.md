@@ -1,7 +1,7 @@
 # izzymonitor
 <a href="https://eigenlucy.github.io/projects/izzymonitor">esp32-s3 based home assistant control panel</a>
 
-<a href="https://github.com/izzyhub/izzymonitor-firmware">firmware development repo</a>
+<a href="https://github.com/izzyhub/izzymonitor-firmware">Rust firmware development repo</a> (thanks izzy!)
 
 # Downloading Gerbers/PCBA files for assembly service
 PCBA files are generated in the build artifacts on each commit. Download the build artifacts from the latest commit under the Actions tab. Upload the default gerber zip to JLCPCB, and use default.csv for the BOM file + default.pos.csv for the CPL file
@@ -52,6 +52,7 @@ Active low. Pin mappings:
 ```
     micro.io14 ~ sw1.KEY; micro.io21 ~ sw2.KEY; micro.io47 ~ sw3.KEY; micro.io48 ~ sw4.KEY; micro.io45 ~ sw5.KEY; micro.io35 ~ sw6.KEY
 ```
+SW1 ~ GPIO14; SW2 ~ GPIO21; SW3 ~ GPIO47; SW4 ~ GPIO48; GPIO45 ~ SW5; SW6 ~ GPIO35
 
 ## <a href="https://www.digikey.com/en/products/detail/knowles/SPH0641LU4H-1/5332438">SPH0641LU4h1</a> MEMS microphone
 <a href="https://jlcpcb.com/partdetail/Knowles-SPH0641LU4H1/C2879853">LCSC_ID = C2879853</a>

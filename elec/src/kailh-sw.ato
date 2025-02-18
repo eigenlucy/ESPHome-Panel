@@ -8,8 +8,9 @@ module KailhSW:
     signal DIN
     signal DOUT
     led = new SK6805EC20
+    # LED Decoupling cap included in SK6805 build
     sw = new CPG1511F01S05
-    pullup = new Resistor; pullup.value = 10kohm +/- 20%; pullup.package = "0201"
+    pullup = new Resistor; pullup.value = 10kohm +/- 20%; pullup.package = "0402"
     power ~ led.power
     power.vcc ~ pullup.p1; pullup.p2 ~ sw.p1; sw.p2 ~ power.gnd
     KEY ~ sw.p1
